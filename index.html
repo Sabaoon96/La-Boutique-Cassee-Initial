@@ -1,0 +1,142 @@
+<html>
+	<head>
+		<title>Sabaoon Raza Khan | La Boutique Cassee</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script src="script.js" type="text/javascript"></script>
+	</head>
+	<body>
+	
+		<!-- Header -->
+		<header>
+			<h1>La Boutique Cassee | The Broken Shop</h1>
+		</header>
+		
+		<!-- Navigation Tabs -->
+		<nav>
+			<hr/>
+			<table style="width: 100%;">
+				<tr>
+					<td id="Home" class="center" onclick="showHome();">
+						<span>Home</span>
+					</td>
+					<td id="Blurays" class="center" onclick="showBlurays();">
+						<span>Blurays</span>
+					</td>
+					<td id="Books" class="center" onclick="showBooks();">
+						<span>Books</span>
+					</td>
+					<td id="Register" class="center" onclick="showRegister();">
+						<span>Register</span>
+					</td>
+					<td id="GuestBook" class="center" onclick="showGuestBook();">
+						<span>Reviews</span>
+					</td>
+				</tr>
+			</table>
+			<hr />
+		</nav>
+
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		<!-- Container div starts here -->
+		<div id="container">
+		
+			<div id="SectionA">
+				<section id="homepage">					
+					<h1 class="center">Welcome to La Boutique Cassee!</h1>
+					
+					<br>		
+					This is an online shopping platform where you can buy Blurays &amp Books. 
+					With such a great range of options, we're sure you'll only leave after having purchased loads from all that we have to offer.
+					
+					<img src="A1.png" alt="Store Image" width="25%" height="40%"></img>
+					
+					You can openly search from within our catalogue; however do remember to "Register" with us before you purchase anything.
+					Also, we'd really appreciate if you left some comments regarding our shop in the "Review" / "Guest Book" section :)
+					<br><br>
+					
+					<h3>Happy shopping!</h3>
+				</section>
+			</div>
+			
+			<div id="SectionB">
+				<section>
+					<h1 class="center">Bluray List</h1> <br>
+					<div class="search">
+						<input type="text" id="findBluray" onkeyup="bluraySearch()" placeholder="&#128269;  Search for Blurays..">
+					</div>
+
+					<table id="showBluTable"></table>
+				</section>
+			</div>
+			
+			<div id="SectionC">
+				<section>
+					<h1 class="center">Books List</h1> <br>
+					<div class="search">
+						<input type="text" id="findBook" onkeyup="bookSearch()" placeholder="&#128269;  Search for Books..">
+					</div>
+					<table id="showBookTable"></table>
+				</section>
+			</div>
+			
+			<!-- Registration Page -->
+			<div id="SectionD">
+				<section>
+					<br>
+					<h2>Please register yourself below:</h2> <br>
+					<div class = "form">
+						<p> 						
+							<label><b>Username: *</b></label> <br>
+							<input id="username" type="text" placeholder="Enter your username..." required/> <br><br>
+							
+							<label><b>Password: *</b></label> <br>
+							<input id="passwrd" type="password" placeholder="Enter your password..." required/> <br><br>
+							
+							<label><b>Address: *</b></label> <br>
+							<input id="addrss" type="text" placeholder="Enter your address..." required/> <br><br>
+							
+							<input type="submit" value="Register" onclick = "userRegister()"/>
+						</p>
+					</div>
+				</section>
+			</div>
+			
+			<div id="SectionE">
+				<br>
+				<h3>Please take some time out to leave a few words in our guest book. <br> 
+					Your comments are greatly appreciated! 
+				</h3> <br>
+				<div class = "form">				
+					<!-- Guest Feedback -->
+					<p>
+						<label><b>Your comments:</b></label> <br>
+						<textarea id="comment" rows="4" cols="70" type="text" placeholder="Type your comment here..."></textarea>
+					</p>
+
+					<!-- Guest Name -->
+					<p> 
+						<label><b>Your name:</b></label> <br>
+						<input id="name" type="text" placeholder="Enter your name here..."/> <br><br>
+						<input type="submit" value="Submit" onclick = "postComment()"/>
+					</p>
+				</div>
+				<br></br>
+
+				<!-- Recent comments -->
+				<label><h3>Recent comments:</h3></label>
+				<div class="commentDisplay">
+					<p id="postedComments"></p>
+				</div>
+			</div>
+			
+		<!-- Container div ends here -->	
+		</div>
+		<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+		
+		<!--Footer Section-->
+		<hr>
+		<footer>Copyright &copy Sabaoon Raza Khan | 2017</footer>
+		
+	</body>
+</html>
