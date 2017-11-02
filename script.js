@@ -87,7 +87,7 @@
 	// Blurays | Javascript Functions
 	
 	function getBluray() {
-		var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brlist";
+		var uri = "https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brlist";
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", uri, true);
 		xhr.setRequestHeader("Accept", "application/json");
@@ -105,10 +105,10 @@
 			
 			// Bluray Images
 			var elem = document.createElement("img");
-			elem.src = 'http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=' + record.Id;
+			elem.src = 'https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brimg?id=' + record.Id;
 			var im = document.getElementById("showBluTable").appendChild(elem);
 			// Bluray Button Link
-			var brlink = 'http://redsox.uoa.auckland.ac.nz/BC/Closed/Service.svc/brbuy?id=' + record.Id;
+			var brlink = 'https://redsox.uoa.auckland.ac.nz/BC/Closed/Service.svc/brbuy?id=' + record.Id;
 			
 			// Bluray Table
 			tableContent += '<td ><img src="' + im.src + '" /></td><td>' + record.Title + '</td><td><a target="_blank" href="' + brlink + '" class="button"> &#128722; Buy Now </a></td></tr>\n';
@@ -121,7 +121,7 @@
 	// Books | Javascript Functions
 	
 	function getBook() {
-		var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/booklist";
+		var uri = "https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/booklist";
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", uri, true);
 		xhr.setRequestHeader("Accept", "application/json");
@@ -139,10 +139,10 @@
 			
 			// Book Images
 			var elem = document.createElement("img");
-			elem.src = 'http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/bookimg?id=' + record.Id;
+			elem.src = 'https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/bookimg?id=' + record.Id;
 			var im = document.getElementById("showBookTable").appendChild(elem);
 			// Book Button Link
-			var bklink = 'http://redsox.uoa.auckland.ac.nz/BC/Closed/Service.svc/bookbuy?id=' + record.Id;
+			var bklink = 'https://redsox.uoa.auckland.ac.nz/BC/Closed/Service.svc/bookbuy?id=' + record.Id;
 			
 			// Book Table
 			tableContent += '<td ><img src="' + im.src + '" /></td><td>' + record.Title + '</td><td><a target="_blank" href="' + bklink + '" class="button"> &#128722; Buy Now </a></td></tr>\n';
@@ -156,7 +156,7 @@
 	
 	function bluraySearch() {
 		var brterm = document.getElementById("findBluray").value;
-		var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brsearch?term=" + String(brterm);
+		var uri = "https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/brsearch?term=" + String(brterm);
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", uri, true);
 		xhr.setRequestHeader("Accept", "application/json");
@@ -169,7 +169,7 @@
 	
 	function bookSearch() {
 		var bkterm = document.getElementById("findBook").value;
-		var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/booksearch?term=" + String(bkterm);
+		var uri = "https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/booksearch?term=" + String(bkterm);
 		var xhr = new XMLHttpRequest();
 		xhr.open("GET", uri, true);
 		xhr.setRequestHeader("Accept", "application/json");
@@ -197,7 +197,7 @@
 
 		} else {
 			var xhr = new XMLHttpRequest();
-			var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/register";
+			var uri = "https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/register";
 			xhr.open("POST", uri, true);
 			
 			var jsonObj = {Address: addrss, Name: username, Password: passwrd};
@@ -232,7 +232,7 @@
 
 		} else {
 			var xhr = new XMLHttpRequest();
-			var uri = "http://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/comment?name=" + name;
+			var uri = "https://redsox.uoa.auckland.ac.nz/BC/Open/Service.svc/comment?name=" + name;
 			xhr.open("POST", uri, true);
 
 			xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
